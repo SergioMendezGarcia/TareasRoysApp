@@ -7,6 +7,7 @@
   <ol>
     <li *ngFor="let i of filtrarProject(filtro)">
       <span>{{i.pid}}, {{i.title}}</span>
+      <span><button [routerLink]="['/proyectos',i.pid]">ver</button></span>
     </li>
   </ol>
 </section>
