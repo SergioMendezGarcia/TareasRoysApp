@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Task } from '../modelos/tarea';
+// import { Task } from '../modelos/tarea';
+import { TareasService } from '../servicios/tareas.service';
 
 @Component({
   selector: 'tareas',
@@ -19,16 +20,10 @@ export class TareasComponent implements OnInit {
         return tiene_texto && es_del_proy;
        })
    };
-  constructor() { }
+  constructor(private _tarServ:TareasService) { }
 
   ngOnInit() {
-
-    this.tasks = [
-      {id: 1, desc: 'Tarea 1', time: '09/04/2019', proy: 1},
-      {id: 2, desc: 'Tarea 2', time: '10/04/2020', proy: 2},
-      {id: 3, desc: 'Tarea 3', time: '10/04/2021', proy: 3},
-      {id: 4, desc: 'Tarea 4', time: '10/04/2022', proy: 4},
-      ];
+    this.tasks = this._tarServ.getTareas();
   }
 
 }
