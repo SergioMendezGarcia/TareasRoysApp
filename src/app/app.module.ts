@@ -5,16 +5,24 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TareasComponent } from './tareas/tareas.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CabeceraComponent } from './cabecera/cabecera.component';
+import { Error404Component } from './error404/error404.component';
+import { DetalleComponent } from './tareas/detalle/detalle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TareasComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    CabeceraComponent,
+    Error404Component,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

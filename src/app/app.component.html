@@ -1,7 +1,12 @@
-<header style="text-align:center">
+<header style="text-align:center">  
     <h1>
       Welcome to {{ title }}!
     </h1>
   </header>
-  <tareas></tareas>
-  <proyectos></proyectos>
+    <ul>
+      <li><a [routerLink]="['/tareas']">Tareas</a></li>
+      <li><a [routerLink]="['/proyectos']">Proyectos</a></li>
+    </ul>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
