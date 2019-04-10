@@ -1,0 +1,13 @@
+<h3>Nueva Tarea</h3>
+
+<form #tareaForm="ngForm" (ngSubmit)="guardarTarea()">
+  <div><textarea required [(ngModel)]="nuevaTarea.desc" name="desc" placeholder="Descripcion"></textarea></div>
+  <div><input [(ngModel)]="nuevaTarea.time" name="time" type="number" min="1" max="8" placeholder="Tiempo" required /></div>
+  <div><input [(ngModel)]="nuevaTarea.proy" name="proy" type="number" placeholder="Proyecto" required /></div>
+  <div><button [disabled]="!tareaForm.valid">Guardar</button></div>
+</form>
+
+
+<pre>{{nuevaTarea|json}}</pre>
+------------------------------
+<pre>{{tareaForm.valid}}</pre>

@@ -11,7 +11,7 @@ export class Task{
     //     this.proy=aProy;
     // }
 
-    constructor(tid:number, desc:string, time:number, proy:number) {
+    constructor(public tid:number, public desc:string, public time:number, public proy:number) {
 
     }
 }
